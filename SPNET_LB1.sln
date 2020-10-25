@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task1", "Task1\Task1.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnotherProj", "AnotherProj\AnotherProj.csproj", "{C1D03762-A99F-4B81-92E3-89045488F32B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LateBinding", "LateBinding\LateBinding.csproj", "{3B274224-5429-47AB-B1E3-E6447513891D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SaveStateIronPython", "SaveStateIronPython\SaveStateIronPython.csproj", "{78CD3796-27CE-4AA6-854E-1CF05F500418}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{C1D03762-A99F-4B81-92E3-89045488F32B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1D03762-A99F-4B81-92E3-89045488F32B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1D03762-A99F-4B81-92E3-89045488F32B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B274224-5429-47AB-B1E3-E6447513891D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B274224-5429-47AB-B1E3-E6447513891D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B274224-5429-47AB-B1E3-E6447513891D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B274224-5429-47AB-B1E3-E6447513891D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78CD3796-27CE-4AA6-854E-1CF05F500418}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78CD3796-27CE-4AA6-854E-1CF05F500418}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78CD3796-27CE-4AA6-854E-1CF05F500418}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78CD3796-27CE-4AA6-854E-1CF05F500418}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

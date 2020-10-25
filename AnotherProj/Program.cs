@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using Task1;
 
 namespace AnotherProj
 {
@@ -11,10 +12,17 @@ namespace AnotherProj
     {
         static void Main(string[] args)
         {
+            TestReflection();
             MakeNewDomain();
             Console.ReadLine();
-
         }
+
+        static void TestReflection()
+        {
+            var taxPayer = new TaxPayer();
+            PropertiesReflectInfo<TaxPayer>(taxPayer);
+        }
+
         static void MakeNewDomain()
         {
             // Создадим новый домен приложения
@@ -41,5 +49,31 @@ namespace AnotherProj
             foreach (var a in infAsm)
                 Console.WriteLine("-> Имя: \t{0}\n-> Версия: \t{1}", a.GetName().Name, a.GetName().Version);
         }
+
+        public static void PropertiesReflectInfo<T>(T obj) where T : class
+        {
+            Type t = typeof(T);
+            // Получаем коллекцию свойств
+            PropertyInfo[] properties = t.GetProperties();
+            Console.WriteLine("*** Список свойств класса {0} ***\n", obj.ToString());
+
+            // Вывести свойства
+            foreach (var property in properties)
+            {
+                Console.Write(" --> " + property.Name + " \t" + property.PropertyType.Name);
+                Console.WriteLine();
+                foreach (MethodInfo am in property.GetAccessors())
+                {
+                    Display("Accessor method: {0}", am);
+                }
+            }
+
+        }
+        
+        public static void Display(string format, params object[] param)
+        {
+            Console.WriteLine(format, param);
+        }
     }
+
 }

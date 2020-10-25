@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Task1.CustomAttributes;
 
 namespace Task1
 {
     //Налогова служба
+    [UInfo(Desc = "Описание класса сущности Налоговая служба")]
     public class TaxOffice
     {
         private readonly List<TaxPayer> TaxPayers = new List<TaxPayer>();
