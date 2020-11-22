@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@model ClientApp.Models.HomePageModel
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    Collect Taxes
+                </div>
+                <div class="card-body">
+                    @using (Html.BeginForm("CollectTaxes", "Home", FormMethod.Post))
+                    {
+                        <div class="form-group">
+                            <input type="submit" name="submit" value="Collect Taxes" class="btn btn-success" />
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <p class="card-title">Messages</p>
+            <p class="card-text">
+                @foreach (var message in @ViewBag.Messages)
+                {
+                    <div>@message</div>
+                }
+            </p>
+        </div>
+    </div>
+</div>

@@ -80,12 +80,16 @@ namespace Task1
                 },
             };
         }
-        public void CollectTaxes()
+        public List<string> CollectTaxes()
         {
+            var response = new List<string>();
             foreach (var item in Revenues)
             {
-                Console.WriteLine(String.Format("Tax was collected from {0} with amount {1}", item.TaxPayer.FullName, item.Amount * 0.2));
+                var message = String.Format("Tax was collected from {0} with amount {1}", item.TaxPayer.FullName, item.Amount * 0.2);
+                Console.WriteLine(message);
+                response.Add(message);
             }
+            return response;
         }
         public List<TaxPayer> GetAllTaxPayers()
         {
@@ -94,6 +98,15 @@ namespace Task1
                 Console.WriteLine(String.Format("Tax payer {0}", item.FullName));
             }
             return TaxPayers;
+        }
+
+        public List<Revenue> GetAllRevenues()
+        {
+            foreach (var item in Revenues)
+            {
+                Console.WriteLine(String.Format("Revenue {0}", item.Id));
+            }
+            return Revenues;
         }
 
         public void AddTaxPayer(TaxPayer taxPayer)
